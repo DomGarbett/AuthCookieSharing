@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  identityprovider:
+    image: ${DOCKER_REGISTRY-}identityprovider
+    build:
+      context: .
+      dockerfile: IdentityProvider\Dockerfile
+
+  netcore:
+    image: ${DOCKER_REGISTRY-}netcore
+    build:
+      context: .
+      dockerfile: NetCore\Dockerfile
+
